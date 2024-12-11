@@ -20,3 +20,15 @@ export async function arraysFromFile(path: string) {
 
   return { array0, array1 };
 }
+
+export async function arraysFromFileRows(path: string) {
+  using file = await Deno.open(path);
+
+  const lines = await Array.fromAsync(
+    file.readable
+      .pipeThrough(new TextDecoderStream())
+      .pipeThrough(new TextLineStream()),
+  );
+
+  return lines.map((x) => x.split(/\s+/).map((y) => parseInt(y)));
+}
