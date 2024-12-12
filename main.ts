@@ -1,7 +1,7 @@
-import { arraysFromFile } from "./util.ts";
-import sumDifferences from "./sumDifferences.ts";
+import { arraysFromFileRows } from "./util.ts";
+import { countIsSafe } from "./isSafe.ts";
 
 if (import.meta.main) {
-  const { array0, array1 } = await arraysFromFile("aoc_01.txt");
-  console.log(sumDifferences(array0, array1));
+  const array = await arraysFromFileRows("aoc_02.txt");
+  console.log(countIsSafe(array));
 }
