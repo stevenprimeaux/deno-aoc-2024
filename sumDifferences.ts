@@ -1,7 +1,4 @@
-export default function sumDifferences(
-  array0: number[],
-  array1: number[],
-): number {
+export function sumDifferences(array0: number[], array1: number[]): number {
   array0.sort((a, b) => a - b);
   array1.sort((a, b) => a - b);
 
