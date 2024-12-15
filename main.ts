@@ -1,7 +1,9 @@
-import { arraysFromFileRows } from "./util.ts";
-import { countIsSafe } from "./isSafe.ts";
+import { getValidMuls, sumValidMuls } from "./sumValidMuls.ts";
+
+const array = getValidMuls(
+  "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))",
+);
 
 if (import.meta.main) {
-  const array = await arraysFromFileRows("aoc_02.txt");
-  console.log(countIsSafe(array));
+  console.log(sumValidMuls(array));
 }

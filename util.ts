@@ -1,6 +1,6 @@
 import { TextLineStream } from "@std/streams/text-line-stream";
 
-export async function arraysFromFile(path: string) {
+export async function arraysFromFileCols(path: string): Promise<number[][]> {
   using file = await Deno.open(path);
 
   const lines = await Array.fromAsync(
@@ -18,10 +18,10 @@ export async function arraysFromFile(path: string) {
       array1[i] = e[1];
     });
 
-  return { array0, array1 };
+  return [array0, array1];
 }
 
-export async function arraysFromFileRows(path: string) {
+export async function arraysFromFileRows(path: string): Promise<number[][]> {
   using file = await Deno.open(path);
 
   const lines = await Array.fromAsync(

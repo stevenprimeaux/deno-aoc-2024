@@ -2,7 +2,7 @@ import { assertEquals } from "@std/assert";
 
 import { arraysFromFileRows } from "./util.ts";
 
-import { countIsSafe, isSafe } from "./isSafe.ts";
+import { countIsSafe, isSafe } from "./countIsSafe.ts";
 
 Deno.test(function isSafeTest() {
   assertEquals(isSafe([1, 4, 7]), true);
