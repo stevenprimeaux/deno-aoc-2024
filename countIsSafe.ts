@@ -26,11 +26,14 @@ export function isSafe1(array: number[]): boolean {
   if (isSafe) {
     return true;
   } else {
-    isSafe = arrayTry0.map((e, i, a) =>
-      e - a[i - 1]
-    ).slice(1).every(isGoodDec) || arrayTry1.map((e, i, a) =>
-      e - a[i - 1]
-    ).slice(1).every(isGoodDec);
+    isSafe = arrayTry0
+      .map((e, i, a) => e - a[i - 1])
+      .slice(1)
+      .every(isGoodDec) ||
+      arrayTry1
+        .map((e, i, a) => e - a[i - 1])
+        .slice(1)
+        .every(isGoodDec);
     if (isSafe) {
       return true;
     }
@@ -49,11 +52,14 @@ export function isSafe1(array: number[]): boolean {
   if (isSafe) {
     return true;
   } else {
-    isSafe = arrayTry0.map((e, i, a) =>
-      e - a[i - 1]
-    ).slice(1).every(isGoodInc) || arrayTry1.map((e, i, a) =>
-      e - a[i - 1]
-    ).slice(1).every(isGoodInc);
+    isSafe = arrayTry0
+      .map((e, i, a) => e - a[i - 1])
+      .slice(1)
+      .every(isGoodInc) ||
+      arrayTry1
+        .map((e, i, a) => e - a[i - 1])
+        .slice(1)
+        .every(isGoodInc);
     if (isSafe) {
       return true;
     }
