@@ -34,11 +34,11 @@ Deno.test(function sumMulsTest() {
 });
 
 Deno.test(async function sumValidMulsTest() {
-  const str = await Deno.readTextFile("aoc_03.txt");
+  const str = await Deno.readTextFile("data/aoc_03.txt");
   assertEquals(sumValidMuls(str), 174960292);
 });
 
 Deno.test(async function sumValidMulsDoTest() {
-  const str = await Deno.readTextFile("aoc_03.txt");
+  const str = await Deno.readTextFile("data/aoc_03.txt");
   assertEquals(sumValidMulsDo(str), 56275602);
 });

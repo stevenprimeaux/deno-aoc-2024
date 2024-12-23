@@ -25,11 +25,11 @@ Deno.test(function isSafe1Test() {
 });
 
 Deno.test(async function countIsSafeTest() {
-  const array = await arraysFromFileRows("aoc_02.txt");
+  const array = await arraysFromFileRows("data/aoc_02.txt");
   assertEquals(countIsSafe(array), 246);
 });
 
 Deno.test(async function countIsSafe1Test() {
-  const array = await arraysFromFileRows("aoc_02.txt");
+  const array = await arraysFromFileRows("data/aoc_02.txt");
   assertEquals(countIsSafe1(array), 318);
 });
